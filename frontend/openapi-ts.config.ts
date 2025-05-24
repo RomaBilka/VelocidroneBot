@@ -2,19 +2,9 @@ import { defineConfig } from "@hey-api/openapi-ts";
 import { defaultPlugins } from "@hey-api/openapi-ts";
 
 export default defineConfig({
-  client: "@hey-api/client-fetch",
   input: "../shared/api/Veloci.Web.json",
   output: "src/api/client",
+  client: "@hey-api/client-fetch",
   experimentalParser: true,
-  plugins: [
-    ...defaultPlugins,
-    // {
-    //   name: "@hey-api/sdk",
-    //   transformer: true,
-    // },
-    // {
-    //   name: "@hey-api/transformers",
-    //   dates: true,
-    // },
-  ],
+  plugins: [...defaultPlugins],
 });
